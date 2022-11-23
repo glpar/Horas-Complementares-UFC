@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivityOrg">
+
+    <item
+        android:id="@+id/itemListarPassageiros"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="@string/listar_passageiros"/>
+    <item
+        android:id="@+id/itemNovoPassageiro"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="@string/novo_passageiro"/>
+    <item
+        android:id="@+id/itemCriarViagem"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:title="@string/criar_viagem"
+        />
+    <item
+        android:id="@+id/itemMeuPefil"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        android:title="@string/meu_perfil"
+        />
+    <item
+        android:id="@+id/itemSair"
+        android:orderInCategory="5"
+        app:showAsAction="never"
+        android:title="@string/logout"
+        />
+
+
+</menu>

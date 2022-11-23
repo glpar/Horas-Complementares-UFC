@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "29311114647",
+    "project_id": "uni-transporte",
+    "storage_bucket": "uni-transporte.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:29311114647:android:0d8b4ebc95e1b45153f8d2",
+        "android_client_info": {
+          "package_name": "com.robertson.unitransporte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "29311114647-fng7qfl69dn85h8l82bb81j0o5i45ts4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEb-tHRhuGQKHZLa8sJBGZoYlg4TFdQ8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "29311114647-fng7qfl69dn85h8l82bb81j0o5i45ts4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

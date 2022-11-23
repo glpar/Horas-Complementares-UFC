@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/textViewNomeViagemMostra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="amostra"
+        android:textColor="@color/black"
+        />
+    
+    <TextView
+        android:id="@+id/textViewOrigemViagemMostra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="150dp"
+        android:layout_marginTop="10dp"
+        android:text="amostra"
+        android:textColor="@color/black"/>
+    
+    <TextView
+        android:id="@+id/textViewHoraSaidaOrigemViagemMostra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/textViewOrigemViagemMostra"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="(saida: 00:00h)"
+        android:textColor="@color/black"/>
+    
+    <ImageView
+        android:id="@+id/imageViagem"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/seta_ida_volta"
+        app:layout_constraintStart_toStartOf="@id/textViewOrigemViagemMostra"
+        app:layout_constraintTop_toBottomOf="@id/textViewOrigemViagemMostra"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/textViewDestinoViagemMostra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/textViewOrigemViagemMostra"
+        app:layout_constraintTop_toBottomOf="@+id/imageViagem"
+        android:layout_marginTop="10dp"
+        android:text="amostra"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/textViewHoraSaideDestinoViagemMostra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/textViewDestinoViagemMostra"
+        app:layout_constraintTop_toBottomOf="@id/imageViagem"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:text="(saida: 00:00h)"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textViewDiasSemanaViagemMostra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNomeViagemMostra"
+        android:text="D S T Q Q S S"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"/>
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

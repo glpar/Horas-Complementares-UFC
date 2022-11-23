@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/itemViagensDisponiveis"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        android:title="@string/viagens_disponiveis"/>
+
+    <item
+        android:id="@+id/itemMeuPefilUsuario"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="@string/meu_perfil"/>
+
+    <item
+        android:id="@+id/itemFazerLogoutUsuario"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        android:title="@string/logout"/>
+
+</menu>

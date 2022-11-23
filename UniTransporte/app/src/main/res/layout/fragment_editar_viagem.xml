@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.EditarViagemFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/purple_500"
+            app:titleTextColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/textViewTextEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/mToolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"
+            android:textSize="35sp"
+            android:text="@string/editar_viagem"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <EditText
+            android:id="@+id/editTextNomeEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ems="13"
+            android:hint="@string/nome_viagem"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTextEditarViagem" />
+
+
+
+        <TextView
+            android:id="@+id/textViewInfOrigemEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextNomeEditarViagem"
+            android:text="@string/origem"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/layoutEstado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfOrigemEditarViagem"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewInfEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:minHeight="48dp"
+                android:text="@string/inf_estados" />
+
+            <Spinner
+                android:id="@+id/spinnerEstados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutCidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutEstado"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewInfCidade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:minHeight="48dp"
+                android:text="@string/inf_cidades" />
+
+            <Spinner
+                android:id="@+id/spinnerCidades"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"/>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/editTextHoraSaidaOrigemEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:hint="@string/hint_hora_origem"
+            android:inputType="time"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutCidade" />
+
+        <TextView
+            android:id="@+id/textViewInfDestinoEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextHoraSaidaOrigemEditarViagem"
+            android:text="@string/destino"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutEstadoDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewInfDestinoEditarViagem"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewInfEstadoDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:minHeight="48dp"
+                android:text="@string/inf_estados" />
+
+            <Spinner
+                android:id="@+id/spinnerEstadosDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutCidadeDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutEstadoDestino"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewInfCidadeDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:minHeight="48dp"
+                android:text="@string/inf_cidades" />
+
+            <Spinner
+                android:id="@+id/spinnerCidadesDestino"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"/>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/editTextHoraSaidaDestinoEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="13"
+            android:hint="@string/hint_hora_destino"
+            android:inputType="time"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutCidadeDestino" />
+        <Button
+            android:id="@+id/buttonDiasSemanaEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editTextHoraSaidaDestinoEditarViagem"
+            android:layout_marginTop="5dp"
+            android:text="@string/selec_dias_semana"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/purple_700"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/buttonCadastrarEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/confirmar"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonDiasSemanaEditarViagem" />
+
+        <ProgressBar
+            android:id="@+id/progressBarEditarViagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/purple_700"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonCadastrarEditarViagem"
+            android:layout_marginTop="20dp"
+            android:visibility="invisible"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

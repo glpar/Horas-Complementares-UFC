@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.DadosViagemPassageiroFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/mToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/purple_500"
+            app:titleTextColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/textViewNomeViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mToolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            android:text="Viagem 1"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/textViewOrigemViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewNomeViagemDadosPassageiro"
+            android:textColor="@color/black"
+            android:text="Origem: Capistrano"
+            android:layout_marginEnd="100dp"
+            />
+
+        <TextView
+            android:id="@+id/textViewDestinoViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewOrigemViagemDadosPassageiro"
+            android:textColor="@color/black"
+            android:text="Destino: Quixadá"
+            android:layout_marginEnd="100dp"/>
+
+        <TextView
+            android:id="@+id/textViewDiasSemanaViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDestinoViagemDadosPassageiro"
+            android:textColor="@color/black"
+            android:text="Dias da semana: seg ter qua qui sex"/>
+
+        <TextView
+            android:id="@+id/textViewHorarioOrigemViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/textViewOrigemViagemDadosPassageiro"
+            app:layout_constraintTop_toBottomOf="@id/textViewNomeViagemDadosPassageiro"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:text="- Saída 13h:00"/>
+
+        <TextView
+            android:id="@+id/textViewHorarioDestinoViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/textViewDestinoViagemDadosPassageiro"
+            app:layout_constraintTop_toBottomOf="@id/textViewOrigemViagemDadosPassageiro"
+            android:textColor="@color/black"
+            android:text="- Saída 17h:00"
+            android:layout_marginStart="5dp"/>
+
+        <TextView
+            android:id="@+id/textViewPassageirosInfPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewDiasSemanaViagemDadosPassageiro"
+            android:textColor="@color/black"
+            android:text="Passageiros inscritos:"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPassageirosViagemDadosPassageiro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPassageirosInfPassageiro"
+            android:layout_marginStart="25dp"
+            tools:listitem="@layout/passageiro_unidade"
+            android:layout_marginEnd="25dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <TextView
+            android:id="@+id/textViewTotalPassageirosInscritosViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewPassageirosViagemDadosPassageiro"
+            android:layout_marginTop="5dp"
+            android:textStyle="normal"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"/>
+
+        <EditText
+            android:id="@+id/editTextInformeSeuDestino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewTotalPassageirosInscritosViagemDadosPassageiro"
+            android:ems="13"
+            android:hint="@string/inf_seu_destino"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/buttonViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextInformeSeuDestino"
+            android:text="@string/se_inscrever"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/buttonDesinscreverViagemDadosPassageiro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonViagemDadosPassageiro"
+            android:text="@string/desinscrever"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
